@@ -1,15 +1,5 @@
+# radellite
+Radellite is a webapp that is using [rockets](https://github.com/rtheunissen/rockets) track reddit for specific keywords.
 
-This is a demo for [rockets](https://github.com/rtheunissen/rockets).
+# Installation
 
----
-
-```bash
-npm install rockets-demo
-cd node_modules
-cd rockets-demo
-npm start  # or `node index.js`
-```
-
----
-
-<img src="demo.gif" width="512"/>

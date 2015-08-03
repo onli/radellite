@@ -1,34 +1,39 @@
 {
-  "name": "rockets-demo",
-  "version": "1.0.2",
-  "description": "Demo for 'rockets'",
-  "license": "MIT",
+  "name": "radellite",
+  "version": "0.0.1",
+  "description": "Observing reddit with rockets",
+  "license": "AGPL",
   "keywords": [
     "rockets",
     "reddit",
-    "demo"
+    "tracker"
   ],
   "author": {
-    "name": "Rudi Theunissen",
-    "email": "rudolf.theunissen@gmail.com",
-    "url": "https://github.com/rtheunissen"
-  },
-  "dependencies": {
-    "rockets": "^1.1.0",
-    "colors": "^1.1.2"
-  },
-  "dev-dependencies": {
-    "coffee-script": "^1.9.3"
+    "name": "Malte Paskuda",
+    "email": "onli@paskuda.biz",
+    "url": "https://github.com/onli"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rtheunissen/rockets-demo"
+    "url": "https://github.com/onli/radellite"
   },
   "bugs": {
-    "url": "https://github.com/rtheunissen/rockets-demo/issues"
+    "url": "https://github.com/onli/radellite/issues"
+  },
+  "dependencies": {
+    "ws": "~0.7.2",
+    "request": "~2.60.0",
+    "express": "~4.13.2",
+    "body-parser": "~1.13.3",
+    "colors": "~1.1.2",
+    "jade": "~1.11.0",
+    "rockets": "~1.0.0",
+    "sqlite3": "~3.0.9"
+  },
+  "config" : {
+    "port" : "3000"
   },
   "scripts": {
-    "start": "node index.js",
-    "prepublish": "coffee -o lib/ -c src/"
+    "start": "node index.js"
   }
 }

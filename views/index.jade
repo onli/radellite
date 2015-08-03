@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        title= "radellite - tracking reddit with the help of rockets"
+        link(rel="stylesheet" href=helpers.url('/main.css', req))
+        link(rel="alternate" href=helpers.url('/feed', req) type="application/rss+xml" title="radelitte feed")
+        script(src=helpers.url('/main.js', req))
+    body
+        h1 radellite
+        section(id="control")
+            h2 Filters
+            div
+                h3 Keyword
+                - for (var i = 0; i < keywords.length; i++)
+                    form(action="/delete/keyword" method="POST")
+                        label(class="activeFilter")= keywords[i].keyword
+                        input(type="hidden" name="keyword" value=keywords[i].keyword)
+                        button(type="submit" class="delete") –
+                form(action="/keyword" method="POST")
+                    input(required="required" name="keyword" class="filterInput")
+                    button(type="submit" class="filterAdd") +
+            div
+                h3 Subreddits
+                - for (var i = 0; i < subreddits.length; i++)
+                    form(action="/delete/subreddit" method="POST")
+                        label(class="activeFilter")= subreddits[i].subreddit
+                        input(type="hidden" name="subreddit" value=subreddits[i].subreddit)
+                        button(type="submit" class="delete") –
+                form(action="/subreddit" method="POST")
+                    input(required="required" name="subreddit" class="filterInput")
+                    button(type="submit" class="filterAdd") +
+        h2 Posts & Comments
+        ul(id="entries")
+            -if (models != undefined)
+                - for (var i = 0; i < models.length; i++)
+                    - model=models[i]
+                    include entry 
+
+    

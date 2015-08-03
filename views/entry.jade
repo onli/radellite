@@ -1,0 +1,10 @@
+li
+    a(class="entry" href=model.url target="_blank" id="entry_" + model.id data-entryid=model.id)
+        if model.text.length > 300
+            p= model.text.substr(0, 300) + "…"
+        else
+            p= model.text
+
+        span(class="subreddit")= model.subr
+        |, 
+        time= new Date(model.date).toUTCString()

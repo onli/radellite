@@ -1,0 +1,16 @@
+doctype xml
+rss(version='2.0' xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/")
+    channel
+        title radellite
+        link= helpers.url('/', req)
+        description
+        generator radelitte
+        atom:link(href= helpers.url('/feed', req) rel="self" type="application/rss+xml")
+        atom:link(rel="hub" href="https://pubsubhubbub.superfeedr.com/")
+        - for (i=0; i<models.length;i++)
+            item
+                title= models[i].text.substr(0, 50)
+                link= models[i].url
+                content:encoded= models[i].text
+                guid(isPermaLink="false")= models[i].id.to_s
+                pubdate= new Date(models[i].date).toUTCString()
