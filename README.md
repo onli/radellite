@@ -15,7 +15,7 @@ or install via npm:
     npm install radellite
     cd node-modules/radellite
 
-In both cases, start with
+In both cases, start with:
     
     npm start
     
@@ -27,4 +27,4 @@ But radellite will also open a websocket server on port 3001 and this is not con
 
 ## Usage
 
-Immediately after startup, *radellite* subscribes to *rockets*, which then sends a copy of every reddit post and comment to it. It is highly recommended to not let it running like that too long, since the database will get big fast. Instead, open the page and set some keyword filters (keyword or regex) and the subreddits in which to search. They are OR-filters, which means every post and comment in all the sepcified that contains at least one keyowrd will be saved.
+Immediately after startup, *radellite* subscribes to *rockets*, which then sends a copy of every reddit post and comment to it. It is highly recommended to not let it running like that too long, since the database will get big fast. Instead, open the page and set some keyword filters (keyword or regex) and the subreddits in which to search. They are OR-filters, which means every post and comment in all the specified subreddits that contain at least one keyword will be saved and displayed.
