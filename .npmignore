@@ -1,2 +1,5 @@
 /src
 demo.gif
+/node_modules
+database.db
+npm-debug.log
