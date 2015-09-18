@@ -27,7 +27,7 @@
     "body-parser": "~1.13.3",
     "colors": "~1.1.2",
     "jade": "~1.11.0",
-    "rockets": "~1.0.0",
+    "rockets": "~1.1.0",
     "sqlite3": "~3.0.9"
   },
   "config" : {
